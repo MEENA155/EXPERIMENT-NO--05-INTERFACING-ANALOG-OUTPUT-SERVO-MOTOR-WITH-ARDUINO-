@@ -67,7 +67,44 @@ CIRCUIT DIAGRAM
 
 
 ### PROGRAM :
- 
+```
+Name : Meena S
+Register Number : 212221240028
+ #include<Servo.h>
+int pos=0;
+Servo servo_9;
+void setup()
+{
+  servo_9.attach(9,500,2500);
+  Serial.begin(9600);
+}
+void loop()
+{
+  //sweep the servo from 0 to 180 degreesin steps of 1 degree//
+  for(pos=0;pos<=180;pos+=1){
+    servo_9.write(pos);
+    delay(15);//wait for 15 millisecond
+    Serial.print("Angle of servo=");
+  Serial.println(pos);
+  }
+  for(pos=180;pos>=0;pos-=1){
+    servo_9.write(pos);
+    delay(15);
+    Serial.print("Angle of servo=");
+  Serial.println(pos);
+  }
+}
+```
+## CIRCUIT DIAGRAM:
+## Off setup:
+![Screenshot (131)](https://user-images.githubusercontent.com/94677128/193594824-d18f25e4-e208-4b33-8f6e-f0e5ec9ea35e.png)
+## On setup:
+![Screenshot (132)](https://user-images.githubusercontent.com/94677128/193595011-4f7540a3-386f-4f2c-9c5f-2a56e3d03525.png)
+## OUTPUT:
+## Serial Monitor:
+![Screenshot (133)](https://user-images.githubusercontent.com/94677128/193595771-c0f0dd3b-4d83-4493-aab6-88a89aa83ffc.png)
+## Toggle graph:
+![Screenshot (134)](https://user-images.githubusercontent.com/94677128/193596131-08734d22-fc50-4e11-b9c2-7a1377079177.png)
 
 
 
